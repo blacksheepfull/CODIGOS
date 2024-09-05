@@ -1,0 +1,31 @@
+# Protótipo de um Jogo de Perguntas e Respostas
+
+# Lista de perguntas e respostas
+perguntas = [
+    {"pergunta": "Qual é a capital do Brasil?", "resposta": "Brasília"},
+    {"pergunta": "Qual é o maior planeta do sistema solar?", "resposta": "Júpiter"},
+    {"pergunta": "Quem escreveu 'Dom Casmurro'?", "resposta": "Machado de Assis"}
+]
+
+def jogo():
+    print("Bem-vindo ao Jogo de Perguntas e Respostas!")
+    pontos = 0
+
+    for item in perguntas:
+        pergunta = item["pergunta"]
+        resposta_certa = item["resposta"]
+
+        # Exibir pergunta
+        resposta_usuario = input(pergunta + " ")
+
+        # Verificar resposta
+        if resposta_usuario.strip().lower() == resposta_certa.lower():
+            print("Resposta correta!")
+            pontos += 1
+        else:
+            print("Resposta incorreta! A resposta correta é:", resposta_certa)
+
+    print(f"Jogo terminado! Você acertou {pontos} de {len(perguntas)} perguntas.")
+
+# Executar o jogo
+jogo()
