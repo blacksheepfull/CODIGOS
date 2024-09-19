@@ -1,0 +1,32 @@
+Início
+    // Entrada de dados
+    Escreva "Informe a quantidade de rodas do veículo:"
+    Leia quantidade_rodas
+
+    Escreva "Informe o peso bruto do veículo em quilogramas:"
+    Leia peso_bruto
+
+    Escreva "Informe a quantidade de pessoas no veículo:"
+    Leia quantidade_pessoas
+
+    // Lógica para determinar a categoria de habilitação
+    Se quantidade_rodas == 2 ou quantidade_rodas == 3 então
+        categoria = "R" // Veículos com duas ou três rodas
+    Senão se quantidade_rodas == 4 então
+        Se quantidade_pessoas <= 8 e peso_bruto <= 3500 então
+            categoria = "B" // Veículos com quatro rodas, até 8 pessoas e até 3.500 kg
+        Senão se peso_bruto > 3500 e peso_bruto <= 6000 então
+            categoria = "C" // Veículos com quatro rodas e peso entre 3.500 e 6.000 kg
+        Senão se quantidade_pessoas > 8 então
+            categoria = "D" // Veículos com quatro rodas ou mais e mais de 8 pessoas
+        Senão
+            categoria = "Inadequado" // Para casos não contemplados
+    Senão se quantidade_rodas >= 4 então
+        Se peso_bruto > 6000 então
+            categoria = "E" // Veículos com mais de 6000 kg
+        Senão
+            categoria = "Inadequado" // Para casos não contemplados
+
+    // Saída do resultado
+    Escreva "A categoria de habilitação para o veículo é:", categoria
+Fim
