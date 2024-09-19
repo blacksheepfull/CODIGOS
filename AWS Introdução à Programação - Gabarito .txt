@@ -1,0 +1,111 @@
+Relembre as instruções do projeto
+
+
+Desenvolva um algoritmo que utilize as seguintes características de um veículo:
+
+Quantidade de rodas;
+Peso bruto em quilogramas;
+Quantidade de pessoas no veículo.
+
+
+
+
+
+
+Relembre as instruções do projeto
+
+
+Com essas informações, o programa mostrará qual é a melhor categoria de habilitação para o veículo informado a partir das condições:
+
+A: Veículos com duas ou três rodas;
+
+B: Veículos com quatro rodas, que acomodam até oito pessoas e seu peso é de até 3500 kg;
+
+C: Veículos com quatro rodas ou mais e com peso entre 3500 e 6000 kg;
+
+D: Veículos com quatro rodas ou mais e que acomodam mais de oito pessoas;
+
+E: Veículos com quatro rodas ou mais e com mais de 6000 kg.
+
+
+
+
+
+
+Exemplo de resposta:
+
+Var
+
+  rodas : inteiro
+
+  peso : real
+
+  qtdPessoas : inteiro
+
+
+
+
+Inicio
+
+  escreva ("Quantas rodas tem o veículo?")
+
+  leia (rodas)
+
+  escreva ("Qual é o peso bruto do veículo?")
+
+  leia (peso)
+
+escreva ("Qual é o maior número de pessoas que o veículo acomoda?")
+
+  leia (qtdPessoas)
+
+
+
+
+se (rodas <= 3) entao
+
+  escreva ("Melhor categoría de habilitação: A")
+
+  senao se (rodas == 4) e (qtdPessoas <= 8) e (peso <= 3500) entao
+
+  escreva ("Melhor categoría de habilitação: B")
+
+  senao se (peso >= 3500) e (peso <= 6000) entao
+
+  escreva ("Melhor categoría de habilitação: C")
+
+  senao se (qtdPessoas > 8) entao
+
+
+ escreva ("Melhor categoría de habilitação: D")
+
+senao se (peso > 6000)
+
+  escreva ("Melhor categoría de habilitação: E")
+
+Fimalgoritmo
+
+
+
+
+
+
+
+Seguindo à risca as descrições de cada categoria passadas nas orientações da atividade, conseguimos definir uma primeira sentença lógica que verifica se o veículo tem três ou menos rodas. Isto não só serve para determinar que a melhor categoria é a A, caso o resultado da comparação for 'verdadeiro', mas também nos ajuda a simplificar o resto do algoritmo, pois agora sabemos que caso a verificação resultar em 'falso', todos os veículos que forem passar pelas seguintes verificações tem 4 ou mais rodas.
+
+
+
+
+Na seguinte verificação precisamos que o veículo tenha 4 rodas (por isso usamos o operador de igualdade '=='), além de acomodar um máximo de 8 pessoas e pesar até 3500kg. Como essas três condições são obrigatórias para definir um veículo de categoria B, usamos dois operadores 'e', dizendo assim que as três expressões precisam retornar o valor 'verdadeiro' para determinar a categoria B.
+
+
+
+
+Novamente, sabemos que daqui para frente qualquer veículo que retornou 'falso' nas verificações anteriores tem 4 rodas ou mais, portanto, não é mais necessário verificar essa condição. Sendo assim, verificamos apenas se o veículo pesa entre 3500 kg e 6000 kg para determinar a categoria C.
+
+ 
+
+Na sequência, verificamos se o veículo suporta mais do que 8 pessoas para determinar a categoria D, e finalmente verificamos se o peso do veículo é maior do que 6000 kg para determinar a categoria E.
+
+
+
