@@ -1,0 +1,12 @@
+# Array fornecido
+numerosDaSorte = [37, 14, 26, 5, 94, 87]
+
+# Avaliação de cada elemento do array
+for numero in numerosDaSorte:
+    if numero < 50:
+        if numero % 2 == 0:
+            print(f"{numero} é par e menor que 50")
+        else:
+            print(f"{numero} é menor que 50")
+    else:
+        print(f"{numero} é maior que 50")
