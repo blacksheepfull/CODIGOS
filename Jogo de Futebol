@@ -1,0 +1,41 @@
+import random
+import time
+
+# Configuração inicial
+time_1 = "Time A"
+time_2 = "Time B"
+
+# Placar inicial
+placar = {time_1: 0, time_2: 0}
+
+# Duração do jogo em minutos simulados
+duracao_jogo = 90
+
+print("Bem-vindo ao jogo de futebol!")
+print(f"{time_1} vs {time_2}")
+print("O jogo vai começar...\n")
+time.sleep(2)
+
+# Simulação do jogo
+for minuto in range(1, duracao_jogo + 1):
+    # Chance de gol aleatória para cada minuto
+    chance_gol = random.random()
+    if chance_gol < 0.03:  # 3% de chance de gol
+        if random.choice([True, False]):  # Escolha aleatória do time
+            placar[time_1] += 1
+            print(f"{minuto}' Gol do {time_1}! Placar: {placar[time_1]} x {placar[time_2]}")
+        else:
+            placar[time_2] += 1
+            print(f"{minuto}' Gol do {time_2}! Placar: {placar[time_1]} x {placar[time_2]}")
+    time.sleep(0.1)  # Simulação do tempo passando
+
+print("\nFim de jogo!")
+print(f"Placar final: {time_1} {placar[time_1]} x {placar[time_2]} {time_2}")
+
+# Determinação do vencedor
+if placar[time_1] > placar[time_2]:
+    print(f"O vencedor é o {time_1}!")
+elif placar[time_1] < placar[time_2]:
+    print(f"O vencedor é o {time_2}!")
+else:
+    print("O jogo terminou empatado!")
