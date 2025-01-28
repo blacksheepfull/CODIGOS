@@ -1,0 +1,29 @@
+# Associação de Áreas às Tags HTML
+
+1. **Área 1**: `<header>`
+   - Representa o cabeçalho principal da página, que geralmente contém o logotipo e o menu de navegação.
+
+2. **Área 2**: `<section>`
+   - Refere-se a uma seção específica da página que pode conter o conteúdo principal ou blocos relacionados.
+
+3. **Área 3**: `<footer>`
+   - Representa o rodapé da página, que pode conter links importantes, informações de contato e direitos autorais.
+
+4. **Área 4**: `<aside>`
+   - Geralmente usada para barras laterais ou conteúdo adicional, como widgets ou informações suplementares.
+
+5. **Área 5**: `<article>`
+   - Utilizada para conteúdos independentes, como postagens de blog, artigos de notícias ou qualquer conteúdo autossuficiente.
+
+6. **Área 6**: `<nav>`
+   - Representa a área de navegação, como menus ou barras de links.
+
+7. **Área 7**: `<main>`
+   - Indica o conteúdo principal da página, que deve ser único e diretamente relacionado ao objetivo principal do documento.
+
+8. **Área 8**: `<form>`
+   - Refere-se a formulários para entrada de dados, como login, busca ou registro.
+
+---
+
+Se você precisar que eu crie um arquivo com formatação específica ou pronto para upload em um repositório, basta fornecer mais detalhes! 😊
