@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Estilizada com Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Minha Página</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="content">
+                <p>Agora que já aprendeu as propriedades básicas da CSS, é possível aprimorar a atividade anterior aplicando estilos para a página que você já criou.</p>
+                <p>Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto para que outros desenvolvedores possam analisá-lo.</p>
+            </section>
+            <section class="aside">
+                <p>Seja criativo! Use Flexbox para dar flexibilidade ao layout e tornar a página mais dinâmica.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por [Seu Nome]</p>
+    </footer>
+</body>
+</html>
+style.css
+css
+Copiar
+Editar
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilização do corpo da página */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Estilização do conteúdo principal com Flexbox */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilização do conteúdo principal */
+.content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Estilização do aside */
+.aside {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+}
+
+/* Estilização do rodapé */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 8px;
+}
