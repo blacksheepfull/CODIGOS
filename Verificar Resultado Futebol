@@ -1,0 +1,18 @@
+def verificar_resultado(time1, gols_time1, time2, gols_time2):
+    if gols_time1 > gols_time2:
+        return f"{time1} venceu!"
+    elif gols_time1 < gols_time2:
+        return f"{time2} venceu!"
+    else:
+        return "Empate!"
+
+# Exemplo de uso com valores predefinidos para evitar erro de entrada
+exemplos = [
+    ("Time A", 2, "Time B", 1),
+    ("Time C", 0, "Time D", 3),
+    ("Time E", 1, "Time F", 1)
+]
+
+for time1, gols_time1, time2, gols_time2 in exemplos:
+    resultado = verificar_resultado(time1, gols_time1, time2, gols_time2)
+    print(resultado)
